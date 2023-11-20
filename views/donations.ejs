@@ -50,8 +50,9 @@
             <img src="<%= donation.image_url %>" class="card-img-top" alt="Donation Image">
             <div class="card-body">
               <h5 class="card-title"><%= donation.title %></h5>
+              <p class="card-text">Item Type: <%= donation.item_type %></p>
+
               <p class="card-text"><%= donation.description %></p>
-              <p class="card-text">Donor Type: <%= donation.donor_type %></p>
               <!-- Add other fields as needed -->
             </div>
           </div>

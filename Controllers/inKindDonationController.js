@@ -105,12 +105,12 @@ const getInKindDonationById = async (req, res) => {
 };
 
 const validItemTypes = [
-  "Tree Planting Kit",
-  "Irrigation Tools",
-  "Plant Care Essentials",
-  "Portable Planting Boxes",
-  "Native Tree Seeds",
-  "Plants",
+  "مجموعة زراعة الأشجار",
+  "أدوات الري",
+  "مستلزمات العناية بالنباتات",
+  "صناديق الزراعة المحمولة",
+  "بذور الأشجار الأصلية",
+  "نباتات",
 ];
 
 const donationSchema = Joi.object({
@@ -180,13 +180,19 @@ const createInKindDonation = async (req, res) => {
   }
 };
 
+const renderDonationForm = (req, res) => {
+  const { id } = req.params;
+  res.render('createDonations', { donorId: id });
+};
+
+
 module.exports = {
   getAllInKindDonations,
   getInKindDonationById,
   createInKindDonation,
   getDonationsByDonorId,
   imageActivity,
-  
+  renderDonationForm,
   // renderDonationForm, 
   // Add other controller methods as needed
 };

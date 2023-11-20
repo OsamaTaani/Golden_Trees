@@ -2,7 +2,7 @@ const bcrypt = require('bcrypt');
 const Joi = require('joi');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
-const BenOrgMODEL = require('../Models/DonorsOrgSchema');
+const BenOrgMODEL = require('../Models/BenOrgSchema');
 const nodemailer = require('nodemailer');
 dotenv.config();
 
